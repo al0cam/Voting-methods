@@ -8,9 +8,8 @@ def findCandidateObject(candidate, candidateArray):
 
 def plularity(voterArray, candidateArray):
     for voter in voterArray:
-        for vote in voter.choices:
-            candidateObject = findCandidateObject(vote, candidateArray)
-            candidateObject.pluralityVotes += 1
+        candidateObject = findCandidateObject(voter.choices[0], candidateArray)
+        candidateObject.pluralityVotes += 1
     
     candidateWithMostVotes = candidateArray[0]
     for i in candidateArray:
@@ -37,7 +36,7 @@ def isThereCondorcteCandidate(candidateArray):
         if i.bordaVoteWinner and i.pluralityVoteWinner:
             i.condorcteCriterium = True
             return i
-        return False
+    return False
     
 
     

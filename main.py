@@ -14,11 +14,6 @@ voterArray = []
 for i in values:
     voterArray.append(Voter(i))
 
-
-
-# for i in pluralVoteArray:
-#     print(i.name)
-
 VotingSystems.plularity(voterArray, candidateArray)
 VotingSystems.borda(voterArray, candidateArray)
 
@@ -29,7 +24,6 @@ for i in candidateArray:
 
 condorcte = VotingSystems.isThereCondorcteCandidate(candidateArray)
 if(condorcte):
-    print(f"Name of the Condorcte candidate is: {condorcte}")
+    print(f"Name of the Condorcte candidate is: {condorcte.name}")
 else:
     print("There is no Condorcte candidate")
-
